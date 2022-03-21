@@ -22,6 +22,36 @@
             "page",
             "body"
           ]
+        },
+        {
+          "type": "object",
+          "list": true,
+          "name": "blocks",
+          "label": "HTML blocks",
+          "ui": {
+            "defaultItem": {
+              "html": "<h2>Test headline </h2>"
+            }
+          },
+          "fields": [
+            {
+              "type": "string",
+              "label": "Your HTML code",
+              "name": "html",
+              "ui": {
+                "component": "textarea"
+              },
+              "namespace": [
+                "page",
+                "blocks",
+                "html"
+              ]
+            }
+          ],
+          "namespace": [
+            "page",
+            "blocks"
+          ]
         }
       ],
       "namespace": [

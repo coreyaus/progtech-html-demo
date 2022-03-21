@@ -1,5 +1,9 @@
 fragment PageParts on Page {
   body
+  blocks {
+    __typename
+    html
+  }
 }
 
 fragment PostParts on Post {

@@ -79,8 +79,13 @@ type Collection {
 
 union DocumentNode = PageDocument | PostDocument
 
+type PageBlocks {
+  html: String
+}
+
 type Page {
   body: JSON
+  blocks: [PageBlocks]
 }
 
 type PageDocument implements Node & Document {
@@ -143,8 +148,13 @@ input DocumentMutation {
   post: PostMutation
 }
 
+input PageBlocksMutation {
+  html: String
+}
+
 input PageMutation {
   body: JSON
+  blocks: [PageBlocksMutation]
 }
 
 input PostMutation {

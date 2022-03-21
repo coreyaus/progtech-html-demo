@@ -7,6 +7,9 @@ const query = `{
   getPageDocument(relativePath: "home.mdx"){
     data{
       body
+      blocks {
+        html
+      }
     }
   }
 }`;
@@ -18,11 +21,14 @@ export default function Home(props) {
     variables: {},
     data: props.data,
   });
+  const { body, blocks } = data.getPageDocument.data;
 
-  const content = data.getPageDocument.data.body;
   return (
     <Layout>
-      <TinaMarkdown content={content} />
+      <TinaMarkdown content={body} />
+      {blocks.map((block, index) => (
+        <div key={index} dangerouslySetInnerHTML={{ __html: block.html }} />
+      ))}
     </Layout>
   );
 }

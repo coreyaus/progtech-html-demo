@@ -1,5 +1,37 @@
 import { defineSchema, defineConfig } from "tinacms";
 
+// class NumberIncrementor {
+//   static latest() {
+//     this.latestCount = this.latestCount ?? 0;
+//     return this.latestCount;
+//   }
+// }
+
+const defaultHtmlValues = [
+  "Test headline 1",
+  "Test headline 2",
+  "Test headline 3",
+  "Test headline 4",
+  "Test headline 5",
+  "Test headline 6",
+  "Test headline 7",
+  "Test headline 8",
+  "Test headline 9",
+  "Test headline 10",
+  "Test headline 11",
+  "Test headline 12",
+];
+
+var incrementor = 0;
+const blockCount = (number): number | string => {
+  // number = number + 1;
+  // incrementor = number;
+  // return number;
+
+  // return defaultHtmlValues.shift() ?? "Test headline";
+
+  return "";
+};
 // Tina schema
 
 // =================
@@ -17,6 +49,27 @@ export default defineSchema({
           label: "Main Content",
           type: "rich-text",
           isBody: true,
+        },
+        {
+          type: "object",
+          list: true,
+          name: "blocks",
+          label: "HTML blocks",
+          ui: {
+            defaultItem: {
+              html: `<h2>Test headline ${blockCount(incrementor)}</h2>`,
+            },
+          },
+          fields: [
+            {
+              type: "string",
+              label: "Your HTML code",
+              name: "html",
+              ui: {
+                component: "textarea",
+              },
+            },
+          ],
         },
       ],
     },
@@ -75,6 +128,9 @@ export const tinaConfig = defineConfig({
 
       cms.plugins.add(RouteMapping);
     });
+    // import('react-tinacms-editor').then((field)=> {
+    //   cms.plugins.add(field.HtmlFieldPlugin)
+    // })
     return cms;
   },
   apiURL,
