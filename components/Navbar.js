@@ -6,10 +6,42 @@ const links = [
     href: "/",
   },
   {
+    text: "Exercise 1",
+    href: "/exercise-1",
+  },
+  {
+    text: "Exercise 2",
+    href: "/exercise-2",
+  },
+  {
+    text: "Exercise 3",
+    href: "/exercise-3",
+  },
+  {
     text: "Playground",
     href: "/playground",
   },
 ];
+
+const linkElement = ({ href, text }, isCurrentPage) => {
+  if (href === "/") {
+    return (
+      <a href={href} className="nav-link">
+        {text}
+        {isCurrentPage && <span className="sr-only">(current)</span>}
+      </a>
+    );
+  }
+
+  return (
+    <Link key={href} href={href}>
+      <a className="nav-link">
+        {text}
+        {isCurrentPage && <span className="sr-only">(current)</span>}
+      </a>
+    </Link>
+  );
+};
 
 export const Navbar = ({ currentPath }) => {
   return (
@@ -32,15 +64,12 @@ export const Navbar = ({ currentPath }) => {
               {links.map((link, index) => {
                 const isCurrentPage = link.href === currentPath;
                 return (
-                  <li className={`nav-item ${isCurrentPage && "active"}`}>
-                    <Link key={index} href={link.href}>
-                      <a className="nav-link">
-                        {link.text}
-                        {isCurrentPage && (
-                          <span className="sr-only">(current)</span>
-                        )}
-                      </a>
-                    </Link>
+                  <li
+                    className={`nav-item ${index === 0 ? "mr-2" : "mx-2"} ${
+                      isCurrentPage ? "active" : ""
+                    }`}
+                  >
+                    {linkElement(link, isCurrentPage)}
                   </li>
                 );
               })}

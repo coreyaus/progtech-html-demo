@@ -6,7 +6,7 @@ import { TinaEditProvider } from "tinacms/dist/edit-state";
 const App = ({ Component, pageProps }) => {
   const cms = new TinaCMS({
     enabled: true,
-    sidebar: true,
+    sidebar: pageProps.currentPath === "/" ? false : true,
     toolbar: false,
   });
 

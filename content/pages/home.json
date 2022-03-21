@@ -1,12 +1,8 @@
 {
   "blocks": [
     {
-      "name": "Panel #1",
-      "html": "<h1>Test headline!</h1>"
-    },
-    {
-      "name": "Panel #2",
-      "html": "<h2>Another test</h2>\n<p>paragraph!\n"
+      "name": "Homepage",
+      "html": "<div class='jumbotron'><div class='container-lg'><h1 class='display-4'>Introduction to HTML and CSS</h1><p class='lead'><strong class='font-weight-bold'>Congratulations on taking the challenge to learn some code skills!</strong></p><p class='lead'>A basic understanding can take you a long way when it comes to updating hard-content content, feeling confident to tweak pages or embed actions and content on your site</p></div></div>"
     }
   ]
 }

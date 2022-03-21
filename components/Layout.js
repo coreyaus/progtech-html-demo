@@ -5,7 +5,7 @@ export const Layout = ({ currentPath, children }) => {
   return (
     <>
       <Head>
-        <title>Tina App</title>
+        <title>Code Nation - HTML and CSS Exercises</title>
         <meta name="description" content="A TinaCMS Application" />
         <link rel="icon" href="/favicon.ico" />
         <link

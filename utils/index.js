@@ -38,11 +38,13 @@ const blockFields = [
   },
 ];
 
-const singleHtmlField = {
-  component: "textarea",
-  name: "html",
-  label: "HTML for the page",
-};
+const singleHtmlField = [
+  {
+    component: "textarea",
+    name: "html",
+    label: "HTML for the page",
+  },
+];
 
 export const buildFormOptions = (label, initialValues) => {
   return {
