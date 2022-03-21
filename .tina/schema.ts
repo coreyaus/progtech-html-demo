@@ -140,10 +140,12 @@ export const tinaConfig = defineConfig({
     };
 
     // Hijack the onSubmit function for the form...
-    // formConfig.onSubmit = (payload, formApi, callback) => {
-    //   formApi.reset(payload);
-    //   alert("This form doesn't actually save data anywhere. Your changes will all be gone when you refresh the page");
-    // };
+    formConfig.onSubmit = (payload, formApi, callback) => {
+      formApi.reset(payload);
+      alert(
+        "This form doesn't actually save data anywhere. Your changes will all be gone when you refresh the page"
+      );
+    };
 
     return createForm(formConfig);
   },
