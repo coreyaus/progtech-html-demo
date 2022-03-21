@@ -8,7 +8,7 @@ import { tinaConfig } from "../schema.ts";
  * @private Do not import this directly, please import the dynamic provider instead
  */
 const TinaProvider = ({ children }) => {
-  return <TinaCMS {...tinaConfig}>{children}</TinaCMS>;
+  return <TinaCMS>{children}</TinaCMS>;
 };
 
 export default TinaProvider;
