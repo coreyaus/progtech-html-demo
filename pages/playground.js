@@ -1,10 +1,10 @@
 import { Layout } from "../components/Layout";
 import { useForm, usePlugin } from "tinacms";
 import { buildFormOptions } from "../utils";
-import initialValues from "../content/pages/home.json";
+import initialValues from "../content/pages/playground.json";
 
-export default function Home({ initialValues, currentPath }) {
-  const formOptions = buildFormOptions("Homepage", initialValues);
+export default function Playground({ initialValues, currentPath }) {
+  const formOptions = buildFormOptions("Demo page", initialValues);
   const [data, form] = useForm(formOptions);
   usePlugin(form);
 
@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       initialValues,
-      currentPath: "/",
+      currentPath: "/playground",
     },
   };
 };

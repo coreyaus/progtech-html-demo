@@ -1,0 +1,12 @@
+{
+  "blocks": [
+    {
+      "name": "Example navigation menu",
+      "html": "<header><nav class='navbar navbar-expand-lg navbar-dark bg-dark'><div class='container-lg'><button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarColor01' aria-controls='navbarColor01' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button><div class='collapse navbar-collapse' id='navbarColor01'><ul class='navbar-nav mr-auto'><li class='nav-item false'><a href='/' class='nav-link'>Home</a></li><li class='nav-item active'><a href='/playground' class='nav-link'>Playground<span class='sr-only'>(current)</span></a></li></ul></div></div></nav></header>"
+    },
+    {
+      "name": "Example panel",
+      "html": "<div class='jumbotron'><div class='container-lg'><h1 class='display-4'>Welcome to this hackable demo page</h1><p class='lead'>All the code you see here is editable directly through the HTML editors in the sidebar</p><a class='btn btn-primary btn-lg' href='/' role='button'>View the coding excerises</a></div></div>"
+    }
+  ]
+}
