@@ -17,6 +17,9 @@ const query = `{
 }`;
 
 export default function Home(props) {
+  console.log("process.env.NODE_ENV");
+  console.log(process.env.NODE_ENV);
+
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
   const { data } = useTina({
     query,
@@ -39,6 +42,9 @@ export default function Home(props) {
 export const getStaticProps = async () => {
   const branch = "main";
   const apiURL = `https://content.tinajs.io/content/${process.env.NEXT_PUBLIC_TINA_CLIENT_ID}/github/${branch}`;
+
+  console.log("process.env.NODE_ENV");
+  console.log(process.env.NODE_ENV);
 
   let data = {};
   try {
