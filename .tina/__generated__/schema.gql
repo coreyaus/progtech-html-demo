@@ -84,7 +84,6 @@ type PageBlocks {
 }
 
 type Page {
-  body: JSON
   blocks: [PageBlocks]
 }
 
@@ -153,7 +152,6 @@ input PageBlocksMutation {
 }
 
 input PageMutation {
-  body: JSON
   blocks: [PageBlocksMutation]
 }
 

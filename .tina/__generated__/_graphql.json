@@ -1286,21 +1286,6 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "body"
-          },
-          "arguments": [],
-          "type": {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "JSON"
-            }
-          }
-        },
-        {
-          "kind": "FieldDefinition",
-          "name": {
-            "kind": "Name",
             "value": "blocks"
           },
           "arguments": [],
@@ -2339,20 +2324,6 @@
         "value": "PageMutation"
       },
       "fields": [
-        {
-          "kind": "InputValueDefinition",
-          "name": {
-            "kind": "Name",
-            "value": "body"
-          },
-          "type": {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "JSON"
-            }
-          }
-        },
         {
           "kind": "InputValueDefinition",
           "name": {

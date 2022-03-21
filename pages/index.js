@@ -25,7 +25,7 @@ export default function Home(props) {
 
   return (
     <Layout>
-      <TinaMarkdown content={body} />
+      {/* <TinaMarkdown content={body} /> */}
       {blocks.map((block, index) => (
         <div key={index} dangerouslySetInnerHTML={{ __html: block.html }} />
       ))}

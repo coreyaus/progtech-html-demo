@@ -7,31 +7,13 @@ import { defineSchema, defineConfig } from "tinacms";
 //   }
 // }
 
-const defaultHtmlValues = [
-  "Test headline 1",
-  "Test headline 2",
-  "Test headline 3",
-  "Test headline 4",
-  "Test headline 5",
-  "Test headline 6",
-  "Test headline 7",
-  "Test headline 8",
-  "Test headline 9",
-  "Test headline 10",
-  "Test headline 11",
-  "Test headline 12",
-];
+// var incrementor = 0;
+// const blockCount = (number): number => {
+//   number = number + 1;
+//   incrementor = number;
+//   return number;
+// };
 
-var incrementor = 0;
-const blockCount = (number): number | string => {
-  // number = number + 1;
-  // incrementor = number;
-  // return number;
-
-  // return defaultHtmlValues.shift() ?? "Test headline";
-
-  return "";
-};
 // Tina schema
 
 // =================
@@ -44,12 +26,12 @@ export default defineSchema({
       path: "content/page",
       format: "mdx",
       fields: [
-        {
-          name: "body",
-          label: "Main Content",
-          type: "rich-text",
-          isBody: true,
-        },
+        // {
+        //   name: "body",
+        //   label: "Main Content",
+        //   type: "rich-text",
+        //   isBody: true,
+        // },
         {
           type: "object",
           list: true,
@@ -57,7 +39,7 @@ export default defineSchema({
           label: "HTML blocks",
           ui: {
             defaultItem: {
-              html: `<h2>Test headline ${blockCount(incrementor)}</h2>`,
+              html: `<p>Lorem ipsum dolor sit amet</p>`,
             },
           },
           fields: [

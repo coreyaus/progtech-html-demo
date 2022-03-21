@@ -14,23 +14,13 @@
       "format": "mdx",
       "fields": [
         {
-          "name": "body",
-          "label": "Main Content",
-          "type": "rich-text",
-          "isBody": true,
-          "namespace": [
-            "page",
-            "body"
-          ]
-        },
-        {
           "type": "object",
           "list": true,
           "name": "blocks",
           "label": "HTML blocks",
           "ui": {
             "defaultItem": {
-              "html": "<h2>Test headline </h2>"
+              "html": "<p>Lorem ipsum dolor sit amet</p>"
             }
           },
           "fields": [
