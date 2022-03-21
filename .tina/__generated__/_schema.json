@@ -10,8 +10,8 @@
     {
       "label": "Page Content",
       "name": "page",
-      "path": "content/page",
-      "format": "mdx",
+      "path": "content/pages",
+      "format": "json",
       "fields": [
         {
           "type": "object",
@@ -35,7 +35,7 @@
             },
             {
               "type": "string",
-              "label": "Your HTML code",
+              "label": "Your HTML",
               "name": "html",
               "ui": {
                 "component": "textarea"
@@ -55,38 +55,6 @@
       ],
       "namespace": [
         "page"
-      ]
-    },
-    {
-      "label": "Blog Posts",
-      "name": "post",
-      "path": "content/post",
-      "fields": [
-        {
-          "type": "string",
-          "label": "Title",
-          "name": "title",
-          "namespace": [
-            "post",
-            "title"
-          ]
-        },
-        {
-          "type": "string",
-          "label": "Blog Post Body",
-          "name": "body",
-          "isBody": true,
-          "ui": {
-            "component": "textarea"
-          },
-          "namespace": [
-            "post",
-            "body"
-          ]
-        }
-      ],
-      "namespace": [
-        "post"
       ]
     }
   ]

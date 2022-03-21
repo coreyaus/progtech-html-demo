@@ -9,15 +9,9 @@ export default defineSchema({
     {
       label: "Page Content",
       name: "page",
-      path: "content/page",
-      format: "mdx",
+      path: "content/pages",
+      format: "json",
       fields: [
-        // {
-        //   name: "body",
-        //   label: "Main Content",
-        //   type: "rich-text",
-        //   isBody: true,
-        // },
         {
           type: "object",
           list: true,
@@ -26,7 +20,7 @@ export default defineSchema({
           // ui: {
           //   defaultItem: {
           //     name: "New panel",
-          //     html: `<p>Lorem ipsum dolor sit amet</p>`,
+          //     html: "<p>Lorem ipsum dolor sit amet</p>",
           //   },
           // },
           fields: [
@@ -42,34 +36,13 @@ export default defineSchema({
             },
             {
               type: "string",
-              label: "Your HTML code",
+              label: "Your HTML",
               name: "html",
               ui: {
                 component: "textarea",
               },
             },
           ],
-        },
-      ],
-    },
-    {
-      label: "Blog Posts",
-      name: "post",
-      path: "content/post",
-      fields: [
-        {
-          type: "string",
-          label: "Title",
-          name: "title",
-        },
-        {
-          type: "string",
-          label: "Blog Post Body",
-          name: "body",
-          isBody: true,
-          ui: {
-            component: "textarea",
-          },
         },
       ],
     },
@@ -123,7 +96,7 @@ export const tinaConfig = defineConfig({
       incrementor++;
       return {
         name: `New panel #${incrementor}`,
-        html: `<p>Lorem ipsum dolor sit amet</p>`,
+        html: "<p>Lorem ipsum dolor sit amet</p>",
         // id: Math.random().toString(36).substr(2, 9),
       };
     };

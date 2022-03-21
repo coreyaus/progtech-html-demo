@@ -5,8 +5,3 @@ fragment PageParts on Page {
     html
   }
 }
-
-fragment PostParts on Post {
-  title
-  body
-}

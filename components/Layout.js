@@ -1,11 +1,10 @@
-import Link from 'next/link'
-import Head from 'next/head'
+import Head from "next/head";
 
-export const Layout = (props) => {
+export const Layout = ({ currentPath, children }) => {
   return (
     <div
       style={{
-        margin: '3rem',
+        margin: "3rem",
       }}
     >
       <Head>
@@ -13,16 +12,7 @@ export const Layout = (props) => {
         <meta name="description" content="A TinaCMS Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        {' | '}
-        <Link href="/posts">
-          <a>Posts</a>
-        </Link>
-      </header>
-      <main>{props.children}</main>
+      <main>{children}</main>
     </div>
-  )
-}
+  );
+};

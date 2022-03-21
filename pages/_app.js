@@ -2,7 +2,6 @@ import "../styles.css";
 // import TinaProvider from "../.tina/components/TinaProvider";
 import { TinaCMS, TinaProvider } from "tinacms";
 import { TinaEditProvider } from "tinacms/dist/edit-state";
-import { tinaConfig } from "../.tina/schema.ts";
 
 const App = ({ Component, pageProps }) => {
   const cms = new TinaCMS({
