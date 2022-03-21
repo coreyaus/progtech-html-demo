@@ -1,4 +1,4 @@
-import { staticRequest } from "tinacms";
+// import { staticRequest } from "tinacms";
 // import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Layout } from "../components/Layout";
 import { useTina } from "tinacms/dist/edit-state";
@@ -37,12 +37,24 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
+  const branch = "main";
+  const apiURL =
+    process.env.NODE_ENV == "development"
+      ? "http://localhost:4001/graphql"
+      : `https://content.tinajs.io/content/${process.env.NEXT_PUBLIC_TINA_CLIENT_ID}/github/${branch}`;
+
   let data = {};
   try {
-    data = await staticRequest({
-      query,
-      variables,
+    const res = await fetch(apiURL, {
+      method: "POST",
+      body: JSON.stringify({ query, variables }),
+      headers: {
+        // This is the read-only token
+        "X-API-KEY": "24a26eafb2dfe62230d3558ade4313b0618d81ca",
+        "Content-Type": "application/json",
+      },
     });
+    data = await res.json();
   } catch {
     // swallow errors related to document creation
   }
@@ -50,7 +62,6 @@ export const getStaticProps = async () => {
   return {
     props: {
       data,
-      //myOtherProp: 'some-other-data',
     },
   };
 };
