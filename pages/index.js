@@ -1,12 +1,12 @@
 import { staticRequest } from "tinacms";
-import { TinaMarkdown } from "tinacms/dist/rich-text";
+// import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Layout } from "../components/Layout";
 import { useTina } from "tinacms/dist/edit-state";
 
+// We previuosly included "body" in this GraphQL query
 const query = `{
   getPageDocument(relativePath: "home.mdx"){
-    data{
-      body
+    data {
       blocks {
         html
       }
