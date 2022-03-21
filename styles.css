@@ -9,6 +9,14 @@ img {
 }
 
 /**
+* Force the code editor to auto-resize
+**/
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto!important;
+}
+
+/**
 * Base styles for Exercise 3
 **/
 .exercise-3 * {

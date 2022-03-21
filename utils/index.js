@@ -29,7 +29,7 @@ const blockFields = [
           "This is just for helping to organise your blocks in the sidebar - it's not visible on the page",
       },
       {
-        component: "textarea",
+        component: "code-editor",
         name: "html",
         label: "Your HTML",
         initialValue: "<p>Lorem ipsum dolor sit amet</p>",
@@ -40,7 +40,7 @@ const blockFields = [
 
 const singleHtmlField = [
   {
-    component: "textarea",
+    component: "code-editor",
     name: "html",
     label: "HTML for the page",
   },

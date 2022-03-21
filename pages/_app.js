@@ -2,12 +2,14 @@ import "../styles.css";
 // import TinaProvider from "../.tina/components/TinaProvider";
 import { TinaCMS, TinaProvider } from "tinacms";
 import { TinaEditProvider } from "tinacms/dist/edit-state";
+import { CodeEditorPlugin } from "../utils/plugins.jsx";
 
 const App = ({ Component, pageProps }) => {
   const cms = new TinaCMS({
     enabled: true,
     sidebar: pageProps.currentPath === "/" ? false : true,
     toolbar: false,
+    plugins: [CodeEditorPlugin],
   });
 
   const renderEditingInterface = () => {
