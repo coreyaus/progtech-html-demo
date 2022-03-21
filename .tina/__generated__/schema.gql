@@ -80,6 +80,7 @@ type Collection {
 union DocumentNode = PageDocument | PostDocument
 
 type PageBlocks {
+  name: String
   html: String
 }
 
@@ -148,6 +149,7 @@ input DocumentMutation {
 }
 
 input PageBlocksMutation {
+  name: String
   html: String
 }
 

@@ -8,6 +8,7 @@ const query = `{
   getPageDocument(relativePath: "home.mdx"){
     data {
       blocks {
+        name
         html
       }
     }

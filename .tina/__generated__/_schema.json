@@ -18,12 +18,21 @@
           "list": true,
           "name": "blocks",
           "label": "HTML blocks",
-          "ui": {
-            "defaultItem": {
-              "html": "<p>Lorem ipsum dolor sit amet</p>"
-            }
-          },
           "fields": [
+            {
+              "type": "string",
+              "name": "name",
+              "label": "Block name",
+              "description": "This is just for helping to organise your blocks in the sidebar - it's not visible on the page",
+              "ui": {
+                "defaultValue": "test"
+              },
+              "namespace": [
+                "page",
+                "blocks",
+                "name"
+              ]
+            },
             {
               "type": "string",
               "label": "Your HTML code",
