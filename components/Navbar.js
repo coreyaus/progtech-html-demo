@@ -18,6 +18,10 @@ const links = [
     href: "/exercise-3",
   },
   {
+    text: "Presentation",
+    href: "https://www.codenation.com/presentation",
+  },
+  {
     text: "Playground",
     href: "/playground",
   },
