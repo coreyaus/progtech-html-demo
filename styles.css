@@ -1,0 +1,3 @@
+button[aria-label='opens cms sidebar'] {
+  display: none !important;
+}

@@ -85,9 +85,6 @@ const branch = "main";
 // On a Vercel deployment, hit the Tina Cloud API
 const apiURL = `https://content.tinajs.io/content/${process.env.NEXT_PUBLIC_TINA_CLIENT_ID}/github/${branch}`;
 
-console.log("process.env.NODE_ENV");
-console.log(process.env.NODE_ENV);
-
 export const tinaConfig = defineConfig({
   cmsCallback: (cms) => {
     import("tinacms").then(({ RouteMappingPlugin }) => {

@@ -1,7 +1,9 @@
 // import { staticRequest } from "tinacms";
 // import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Layout } from "../components/Layout";
-import { useTina } from "tinacms/dist/edit-state";
+// import { useTina } from "tinacms/dist/edit-state";
+import { useForm, usePlugin } from "tinacms";
+// import { allPageFields } from "../.tina/schema.ts";
 
 const variables = {};
 // We previuosly included "body" in this GraphQL query
@@ -16,23 +18,64 @@ const query = `{
   }
 }`;
 
-export default function Home(props) {
-  console.log("process.env.NODE_ENV");
-  console.log(process.env.NODE_ENV);
+// The incrementor is used in the code below when adding new blocks
+var incrementor = 0;
 
-  // data passes though in production mode and data is updated to the sidebar data in edit-mode
-  const { data } = useTina({
-    query,
-    variables,
-    data: props.data,
-  });
-  // const { body, blocks } = data.getPageDocument.data;
-  const { blocks } = data.getPageDocument.data;
+export default function Home(props) {
+  const initialData = props.data.data.getPageDocument.data;
+  const formOptions = {
+    label: "Home Page",
+    loadInitialValues: () => Promise.resolve(initialData),
+    onSubmit: (payload, formApi, callback) => {
+      formApi.reset(payload);
+      alert(
+        "This form doesn't actually save data anywhere. Your changes will all be gone when you refresh the page"
+      );
+    },
+    fields: [
+      {
+        component: "group-list",
+        name: "blocks",
+        label: "HTML blocks",
+        defaultItem: () => {
+          incrementor++;
+          return {
+            name: `New panel #${incrementor}`,
+            html: `<p>Lorem ipsum dolor sit amet</p>`,
+            // id: Math.random().toString(36).substr(2, 9),
+          };
+        },
+        itemProps: (item) => {
+          return {
+            key: item.id,
+            label: item.name,
+          };
+        },
+        fields: [
+          {
+            component: "text",
+            name: "name",
+            label: "Block name",
+            description:
+              "This is just for helping to organise your blocks in the sidebar - it's not visible on the page",
+          },
+          {
+            component: "textarea",
+            name: "html",
+            label: "Your HTML code",
+          },
+        ],
+      },
+    ],
+  };
+  const [data, form] = useForm(formOptions);
+  usePlugin(form);
+  const { blocks } = data;
 
   return (
     <Layout>
       {/* <TinaMarkdown content={body} /> */}
-      {blocks.map((block, index) => (
+      {blocks?.map((block, index) => (
         <div key={index} dangerouslySetInnerHTML={{ __html: block.html }} />
       ))}
     </Layout>
@@ -42,9 +85,6 @@ export default function Home(props) {
 export const getStaticProps = async () => {
   const branch = "main";
   const apiURL = `https://content.tinajs.io/content/${process.env.NEXT_PUBLIC_TINA_CLIENT_ID}/github/${branch}`;
-
-  console.log("process.env.NODE_ENV");
-  console.log(process.env.NODE_ENV);
 
   let data = {};
   try {

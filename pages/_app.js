@@ -1,10 +1,29 @@
-import TinaProvider from "../.tina/components/TinaProvider";
+import "../styles.css";
+// import TinaProvider from "../.tina/components/TinaProvider";
+import { TinaCMS, TinaProvider } from "tinacms";
+import { TinaEditProvider } from "tinacms/dist/edit-state";
+import { tinaConfig } from "../.tina/schema.ts";
 
 const App = ({ Component, pageProps }) => {
+  const cms = new TinaCMS({
+    enabled: true,
+    sidebar: true,
+    toolbar: false,
+  });
+
+  const renderEditingInterface = () => {
+    return (
+      // NOTE: We could set other options like formifyCallback here if we wanted...
+      <TinaProvider cms={cms}>
+        <Component {...pageProps} />
+      </TinaProvider>
+    );
+  };
+
   return (
-    <TinaProvider>
-      <Component {...pageProps} />
-    </TinaProvider>
+    <TinaEditProvider editMode={renderEditingInterface()}>
+      {renderEditingInterface()}
+    </TinaEditProvider>
   );
 };
 
