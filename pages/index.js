@@ -3,6 +3,7 @@ import { staticRequest } from "tinacms";
 import { Layout } from "../components/Layout";
 import { useTina } from "tinacms/dist/edit-state";
 
+const variables = {};
 // We previuosly included "body" in this GraphQL query
 const query = `{
   getPageDocument(relativePath: "home.mdx"){
@@ -19,10 +20,11 @@ export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
   const { data } = useTina({
     query,
-    variables: {},
+    variables,
     data: props.data,
   });
-  const { body, blocks } = data.getPageDocument.data;
+  // const { body, blocks } = data.getPageDocument.data;
+  const { blocks } = data.getPageDocument.data;
 
   return (
     <Layout>
@@ -35,7 +37,6 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
-  const variables = {};
   let data = {};
   try {
     data = await staticRequest({
