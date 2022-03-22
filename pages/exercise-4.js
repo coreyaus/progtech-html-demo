@@ -37,6 +37,13 @@ const outFunc = () => {
 const displayInstructions = (block) => {
   // Base this condition on the block name
   // (replacing the example placeholder conditional below)
+  if(block.name.toLowerCase().includes("new panel")){
+    return (
+      <div className="container pt-4">
+        This is a blank panel for you to have some fun!
+      </div>
+    )
+  }
   switch (block.name.toLowerCase()) {
     case "hackable demo panel":
       return (
