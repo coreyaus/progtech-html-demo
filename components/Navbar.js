@@ -28,7 +28,7 @@ const links = [
   },
   {
     text: "HTML Cheatsheet",
-    href: "/html-cheatsheet.pdf",
+    href: "https://assets.nationbuilder.com/codenation/pages/33899/attachments/original/1647992738/HTML-Cheatsheet.pdf?1647992738",
     target: "_blank",
   },
 ];
