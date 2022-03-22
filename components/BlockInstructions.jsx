@@ -16,12 +16,12 @@ const outFunc = () => {
 export const BlockInstructions = ({ block, blockId }) => {
   const accordionId = `${blockId}-accordion`;
   return (
-    <div class="accordion" id={accordionId}>
-      <div class="card text-white bg-info rounded-0">
-        <div class="card-header" id={`headingOne-${accordionId}`}>
-          <h4 class="mb-0">
+    <div className="accordion" id={accordionId}>
+      <div className="card text-white bg-info rounded-0">
+        <div className="card-header" id={`headingOne-${accordionId}`}>
+          <h4 className="mb-0">
             <button
-              class="btn btn-link text-light text-left collapsed"
+              className="btn btn-link text-light text-left collapsed"
               type="button"
               data-toggle="collapse"
               data-target={`#collapseOne-${accordionId}`}
@@ -35,11 +35,11 @@ export const BlockInstructions = ({ block, blockId }) => {
         </div>
         <div
           id={`collapseOne-${accordionId}`}
-          class="bg-white text-dark collapse"
+          className="bg-white text-dark collapse"
           aria-labelledby={`headingOne-${accordionId}`}
           data-parent={`#${accordionId}`}
         >
-          <div class="card-body">
+          <div className="card-body">
             <BlockTasks block={block} />
           </div>
         </div>
@@ -106,30 +106,38 @@ const HeroPanelTasks = ({ block }) => {
 
 const CardTasks = ({ block }) => {
   return (
-    <div class="pt-2">
+    <div className="pt-2">
       <ol>
-        <li class="pb-2">
+        <li className="pb-2">
           <p>
             Change the content of the <strong>"src" attribute</strong> in the
             "&lt;img/&gt;" tag to be the url of any image.
           </p>
           <p>Or you can copy in the following random URL:</p>
-          <input
-            className="mr-2"
-            type="text"
-            value="https://source.unsplash.com/random/400x300"
-            id="myInput"
-          ></input>
-          <div class="tooltip">
-            <button onClick={copyToClipboard} onMouseOut={outFunc}>
-              <span class="tooltiptext" id="myTooltip">
-                Copy to clipboard
-              </span>
-              Copy image URL
-            </button>
+          <div className="input-group mb-2 w-50">
+            <input
+              className="form-control"
+              type="text"
+              value="https://source.unsplash.com/random/400x300"
+              id="myInput"
+            ></input>
+            <div className="input-group-append">
+              <div className="tooltip">
+                <button
+                  className="btn btn-info"
+                  onClick={copyToClipboard}
+                  onMouseOut={outFunc}
+                >
+                  <span className="tooltiptext" id="myTooltip">
+                    Copy to clipboard
+                  </span>
+                  Copy image URL
+                </button>
+              </div>
+            </div>
           </div>
         </li>
-        <li class="pb-2">
+        <li className="pb-2">
           <p>
             Change the text of the card to describe the image you have added
           </p>
@@ -145,7 +153,7 @@ const CardTasks = ({ block }) => {
 
 const CustomCodeTasks = ({ block }) => {
   return (
-    <div class="pt-2">
+    <div className="pt-2">
       <ol>
         <li>
           Go to the{" "}
