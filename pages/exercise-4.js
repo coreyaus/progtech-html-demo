@@ -2,11 +2,11 @@ import { Layout } from "../components/Layout";
 import { PrimaryInstructions } from "../components/PrimaryInstructions";
 import { BlockInstructions } from "../components/BlockInstructions";
 import { useForm, usePlugin } from "tinacms";
-import { buildFormOptionswithBlocks } from "../utils";
+import { buildFormOptions } from "../utils";
 import initialValues from "../content/pages/playground.json";
 
 export default function Exercise({ initialValues, currentPath }) {
-  const formOptions = buildFormOptionswithBlocks("Exercise 4", initialValues);
+  const formOptions = buildFormOptions("Exercise 4", initialValues);
   const [data, form] = useForm(formOptions);
   usePlugin(form);
 
