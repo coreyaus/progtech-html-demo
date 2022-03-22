@@ -6,6 +6,11 @@ const links = [
     href: "/",
   },
   {
+    text: "Presentation",
+    href: "https://www.codenation.com/presentation",
+    target: "_blank",
+  },
+  {
     text: "Exercise 1",
     href: "/exercise-1",
   },
@@ -18,19 +23,20 @@ const links = [
     href: "/exercise-3",
   },
   {
-    text: "Presentation",
-    href: "https://www.codenation.com/presentation",
+    text: "Exercise 4",
+    href: "/exercise-4",
   },
   {
-    text: "Playground",
-    href: "/playground",
+    text: "HTML Cheatsheet",
+    href: "/html-cheatsheet.pdf",
+    target: "_blank",
   },
 ];
 
-const linkElement = ({ href, text }, isCurrentPage) => {
-  if (href === "/") {
+const linkElement = ({ href, text, target }, isCurrentPage) => {
+  if (href === "/" || target === "_blank") {
     return (
-      <a href={href} className="nav-link">
+      <a href={href} className="nav-link" target={target}>
         {text}
         {isCurrentPage && <span className="sr-only">(current)</span>}
       </a>

@@ -34,8 +34,8 @@ export default function Exercise({ initialValues, currentPath }) {
       </div>
 
       <div className="container-lg py-5">
-        <div class="row">
-          <div class="col-md-12 exercise-3">
+        <div className="row">
+          <div className="col-md-12 exercise-3">
             {data?.html && (
               <div dangerouslySetInnerHTML={{ __html: data.html }} />
             )}

@@ -7,7 +7,10 @@ import { CodeEditorPlugin } from "../utils/plugins.jsx";
 const App = ({ Component, pageProps }) => {
   const cms = new TinaCMS({
     enabled: true,
-    sidebar: pageProps.currentPath === "/" ? false : true,
+    sidebar:
+      pageProps.currentPath === "/" || pageProps.statusCode === 404
+        ? false
+        : true,
     toolbar: false,
     plugins: [CodeEditorPlugin],
   });

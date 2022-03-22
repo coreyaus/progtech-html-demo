@@ -20,9 +20,10 @@ const CodeEditor = (props) => {
       <label htmlFor={props.field.name}>
         <strong>{props.field.label}</strong>
       </label>
-      {props.field.name.includes("html") && (
+
+      {/* {props.field.name.includes("html") && (
         <p>Instructions on where to find the HTML snippet</p>
-      )}
+      )} */}
       <CodeMirror
         {...props}
         value={props.input.value}

@@ -35,13 +35,13 @@ export default function Exercise({ initialValues, currentPath }) {
       </div>
 
       <div className="container py-5">
-        <div class="row">
-          <div class="col-md-6">
+        <div className="row">
+          <div className="col-md-6">
             {data?.html && (
               <div dangerouslySetInnerHTML={{ __html: data.html }} />
             )}
           </div>
-          <div class="col-md-6">
+          <div className="col-md-6">
             <div dangerouslySetInnerHTML={{ __html: initialValues.goal }} />
           </div>
         </div>

@@ -26,9 +26,10 @@ const exercises = [
   },
   {
     name: "Exercise 4",
-    headline: "CSS - using a framework/theme",
-    description: "Coming soon!",
-    link: "",
+    headline: "CSS - adding styles to a page",
+    description:
+      "Create your first live webpage! Use the editor to add new panels to the page with HTML and style each new feature with CSS",
+    link: "exercise-4",
   },
 ];
 
