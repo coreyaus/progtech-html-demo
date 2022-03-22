@@ -6,6 +6,10 @@ const links = [
     href: "/",
   },
   {
+    text: "Presentation",
+    href: "https://www.codenation.com/presentation",
+  },
+  {
     text: "Exercise 1",
     href: "/exercise-1",
   },
@@ -18,12 +22,8 @@ const links = [
     href: "/exercise-3",
   },
   {
-    text: "Presentation",
-    href: "https://www.codenation.com/presentation",
-  },
-  {
-    text: "Playground",
-    href: "/playground",
+    text: "Excercise 4",
+    href: "/exercise-4",
   },
 ];
 

@@ -5,8 +5,17 @@
       "html": "<header>\n\t<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>\n\t\t<div class='container-lg'>\n\t\t\t<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarColor01' aria-controls='navbarColor01' aria-expanded='false' aria-label='Toggle navigation'>\n\t\t\t\t<span class='navbar-toggler-icon'></span>\n\t\t\t</button>\n\t\t\t<div class='collapse navbar-collapse' id='navbarColor01'>\n\t\t\t\t<ul class='navbar-nav mr-auto'>\n\t\t\t\t\t<li class='nav-item mr-2'>\n\t\t\t\t\t\t<a class='nav-link' href='/'>Home</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class='nav-item mx-2'>\n\t\t\t\t\t\t<a class='nav-link' href='/exercise-1'>Exercise 1</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class='nav-item mx-2'>\n\t\t\t\t\t\t<a class='nav-link' href='/exercise-2'>Exercise 2</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class='nav-item mx-2'>\n\t\t\t\t\t\t<a class='nav-link' href='/exercise-3'>Exercise 3</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class='nav-item mx-2'>\n\t\t\t\t\t\t<a class='nav-link' href='https://www.codenation.com/presentation'>Presentation</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class='nav-item mx-2 active'>\n\t\t\t\t\t\t<a class='nav-link' href='/playground'>Playground \n\t\t\t\t\t\t\t<span class='sr-only'>(current)</span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</nav>\n</header>"
     },
     {
-      "name": "Example panel",
-      "html": "<div class='jumbotron'>\n\t<div class='container-lg'>\n\t\t<h1 class='display-4'>Welcome to this hackable demo page</h1>\n\t\t<p class='lead'>All the code you see here is editable directly through the HTML editors in the sidebar</p>\n\t\t<a class='btn btn-primary btn-lg' href='/' role='button'>View the coding excerises</a>\n\t</div>\n</div>"
+      "name": "Hackable demo panel",
+      "html": "<div id=\"demo_panel\" class='jumbotron'>\n\t<div class='container-lg'>\n\t\t<h1 class='display-4'>Welcome to this hackable demo panel</h1>\n\t\t<p class='lead'>All the code you see here is editable directly through the HTML editors in the sidebar</p>\n\t</div>\n</div>"
+    },
+    {
+      "name": "Card",
+      "html": "<div class=\"container\">\n  <div class=\"card\" style=\"width: 18rem;\">\n  <img src=\"...\" class=\"card-img-top\" alt=\"...\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Card title</h5>\n    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n    <a href=\"#\" target=\"_blank\" class=\"btn btn-primary\">Go somewhere</a>\n  </div>\n</div>\n</div>"
+    },
+    {
+      "name": "Dropdown",
+      "html": "// Paste the dropdown html here"
     }
+
   ]
 }
