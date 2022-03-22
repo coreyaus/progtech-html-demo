@@ -14,11 +14,16 @@ export const buildFormOptions = (label, initialValues) => {
   };
 };
 
-const buildBlock = (label, defaultHtml, defaultCss) => {
-  const nameAndNumber = (name, count) => {
-    if (count === 1) return name;
-    return `${name} #${count}`;
+const buildBlock = (blockType, defaultHtml, defaultCss) => {
+  const label = mapNamesToLabels[blockType];
+  const buildBlockName = (count) => {
+    if (count === 1) return label;
+    return `${label} #${count}`;
   };
+  const blockClasses = (blockId) => {
+    if (blockType === blockId) return blockType;
+    return `${blockType} ${blockId}`;
+  }
 
   // This incrementor is used in the code below when adding new blocks
   var blockIncrementor = 0;
@@ -41,17 +46,17 @@ const buildBlock = (label, defaultHtml, defaultCss) => {
         component: "code-editor",
         name: "css",
         label: "Your CSS",
-        initialValue: "body { background: blue; }",
+        // initialValue: "body { background: blue; }",
       },
     ],
     defaultItem: () => {
       blockIncrementor++;
-      const blockName = nameAndNumber(label, blockIncrementor);
+      const blockName = buildBlockName(blockIncrementor);
       const blockId = blockName.replaceAll(/[^A-Z0-9]/gi, "-").toLowerCase();
       return {
-        name: nameAndNumber(label, blockIncrementor),
-        html: defaultHtml ?? "<div class='jumbotron border rounded-0'></div>",
-        css: defaultCss ?? `#${blockId} { background: red; }`,
+        name: buildBlockName(blockIncrementor),
+        html: defaultHtml ?? `<div class='p-5 ${blockClasses(blockId)}'></div>`,
+        css: defaultCss ?? `.${blockId} { background: #e9ecef; }`,
         // id: Math.random().toString(36).substr(2, 9),
       };
     },
@@ -73,6 +78,12 @@ const singleHtmlField = [
   },
 ];
 
+const mapNamesToLabels = {
+  card: "Card",
+  hero: "Hero Panel",
+  customCode: "Custom Code Block",
+};
+
 // Use block fields with different templates and helper text,
 // rather than just a simple group-list field
 // https://tina.io/docs/reference/toolkit/fields/blocks/
@@ -82,9 +93,9 @@ const blockFields = [
     name: "blocks",
     label: "HTML blocks",
     templates: {
-      card: buildBlock("Card"),
-      hero: buildBlock("Hero Panel"),
-      customCode: buildBlock("Custom Code Block"),
+      card: buildBlock("card"),
+      hero: buildBlock("hero"),
+      customCode: buildBlock("customCode"),
     },
   },
 ];

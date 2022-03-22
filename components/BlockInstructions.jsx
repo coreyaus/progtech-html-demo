@@ -17,7 +17,7 @@ export const BlockInstructions = ({ block, blockId }) => {
   const accordionId = `${blockId}-accordion`;
   return (
     <div class="accordion" id={accordionId}>
-      <div class="card text-white bg-info">
+      <div class="card text-white bg-info rounded-0">
         <div class="card-header" id={`headingOne-${accordionId}`}>
           <h4 class="mb-0">
             <button
