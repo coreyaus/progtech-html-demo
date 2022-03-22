@@ -10,7 +10,7 @@ const blockFields = [
       incrementor++;
       return {
         name: `New panel #${incrementor}`,
-        html: "<p>Lorem ipsum dolor sit amet</p>",
+        html: `<div class="jumbotron"></div>`,
         // id: Math.random().toString(36).substr(2, 9),
       };
     },
@@ -18,6 +18,7 @@ const blockFields = [
       return {
         key: item.id,
         label: item.name,
+        // id: item.name.replaceAll(/[^A-Z0-9]/gi, "-").toLowerCase(),
       };
     },
     fields: [
@@ -32,7 +33,20 @@ const blockFields = [
         component: "code-editor",
         name: "html",
         label: "Your HTML",
-        initialValue: "<p>Lorem ipsum dolor sit amet</p>",
+        initialValue: `<div class="jumbotron"></div>`,
+      },
+      {
+        component: "code-editor",
+        name: "css",
+        label: "Your CSS",
+        initialValue: "body { background: blue; }",
+        // initialValue: (item) => {
+        //   const blockId = item.name
+        //     .replaceAll(/[^A-Z0-9]/gi, "-")
+        //     .toLowerCase();
+        //   console.log(item);
+        //   return `#${blockId} { background: blue; }`;
+        // },
       },
     ],
   },
@@ -59,5 +73,22 @@ export const buildFormOptions = (label, initialValues) => {
     fields: initialValues.hasOwnProperty("blocks")
       ? blockFields
       : singleHtmlField,
+  };
+};
+
+export const buildFormOptionswithBlocks = (label, initialValues) => {
+  return {
+    label,
+    loadInitialValues: () => Promise.resolve(initialValues),
+    onSubmit: (payload, formApi, callback) => {
+      formApi.reset(payload);
+      alert(
+        "This form doesn't actually save data anywhere. Your changes will all be gone when you refresh the page"
+      );
+    },
+    // Use block fields with different templates and helper text,
+    // rather than just a simple group-list field
+    // https://tina.io/docs/reference/toolkit/fields/blocks/
+    fields: {},
   };
 };
