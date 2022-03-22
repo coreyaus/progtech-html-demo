@@ -26,7 +26,7 @@ export default function Exercise({ initialValues, currentPath }) {
             <div
               id={blockId}
               dangerouslySetInnerHTML={{ __html: block.html }}
-              class={`${
+              className={`${
                 block.name.toLowerCase() == "dropdown" ? "container" : ""
               }`}
             />
