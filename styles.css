@@ -62,7 +62,7 @@ img {
   right: -17px;
   top: 50%;
   margin-top: -20px;
-  /*color: blue*/
+  color: transparent;
 }
 .body {
   position: absolute;
@@ -70,7 +70,7 @@ img {
   top: 90px;
   width: 100px;
   height: 100px;
-  /*background: blue;*/
+  background: transparent;
   border-radius: 100px;
   z-index: 1;
 }
@@ -80,12 +80,12 @@ img {
   top: 30px;
   width: 100px;
   height: 100px;
-  /*background: #f1f1f1;*/
+  background: transparent;
   border-radius: 100px;
   z-index: 2;
 }
 .wing {
-  /*color: yellow;*/
+  color: transparent;
   position: absolute;
   top: 40px;
   font-size: 40px;
@@ -101,7 +101,7 @@ img {
   top: 180px;
   left: 80px;
   font-weight: bold;
-  /*color: red*/
+  color: transparent;
 }
 .drumstick-right {
   left: 110px;
