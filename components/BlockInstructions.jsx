@@ -53,8 +53,8 @@ const BlockTasks = ({ block }) => {
     return <HeroPanelTasks block={block} />;
   } else if (block.name.includes("Card")) {
     return <CardTasks block={block} />;
-  } else if (block.name.includes("Custom Code")) {
-    return <CustomCodeTasks block={block} />;
+  } else if (block.name.includes("Dropdown")) {
+    return <DropdownTasks block={block} />;
   } else {
     return null;
   }
@@ -165,7 +165,7 @@ const CardTasks = ({ block }) => {
   );
 };
 
-const CustomCodeTasks = ({ block }) => {
+const DropdownTasks = ({ block }) => {
   return (
     <div className="pt-2">
       <ol>
