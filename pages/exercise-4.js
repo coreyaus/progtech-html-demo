@@ -55,15 +55,15 @@ const displayInstructions = (block) => {
             </li>
             <li>
               Add a <strong>href attribute</strong> to the "&lt;a&gt;" tag that links to a place of your choosing.
-              <div id="panel-link-hint">(<u>hover for hint</u>)</div>
+              <div><span id="panel-link-hint">(<u>hover for hint</u>)</span></div>
             </li>
             <li>
               Change the background color of the "&lt;div&gt;" with the id of "demo_panel" to yellow using <strong>inline styling</strong>
-              <div id="panel-inline-hint">(<u>hover for hint</u>)</div>
+              <div><span id="panel-inline-hint">(<u>hover for hint</u>)</span></div>
             </li>
             <li>
               Change the color of the text on the panel to red using <strong>style tags</strong> in your html editor
-              <div id="panel-tag-hint">(<u>hover for hint</u>)</div>
+              <div><span id="panel-tag-hint">(<u>hover for hint</u>)</span></div>
             </li>
           </ol>
         </div>
@@ -114,10 +114,16 @@ const displayInstructions = (block) => {
               Scroll down until you find the <strong>first code example</strong>. Copy and paste this into your html field.
             </li>
             <li>
-              Change the <strong>background color</strong> of the button using the css editor <span id="dropdown-bg-hint">(<u>hover for hint</u>)</span>
+              Change the <strong>background color</strong> of the button using the css editor 
+              <div>
+                <span id="dropdown-bg-hint">(<u>hover for hint</u>)</span>
+              </div>
             </li>
             <li>
-              Change the <strong>font size</strong> of the button using the css editor <span id="dropdown-font-hint">(<u>hover for hint</u>)</span>
+              Change the <strong>font size</strong> of the button using the css editor 
+              <div>
+                <span id="dropdown-font-hint">(<u>hover for hint</u>)</span>
+              </div>
             </li>
           </ol>
         </div>
