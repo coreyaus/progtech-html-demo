@@ -62,9 +62,12 @@ const BlockTasks = ({ block }) => {
 
 const HeroPanelTasks = ({ block }) => {
   return (
-    <div className="pt-2">
+    <div className="pt-2 pb-3">
       <ol>
-        <li>Add a link to the text of the panel using an "&lt;a&gt;" tag</li>
+        <li>
+          Add an image to the panel using an "&lt;img&gt;" tag (make sure to set
+          a "src" attribute!)
+        </li>
         <li>
           Add a <strong>href attribute</strong> to the "&lt;a&gt;" tag that
           links to a place of your choosing.
@@ -91,6 +94,10 @@ const HeroPanelTasks = ({ block }) => {
               (<u>hover for hint</u>)
             </span>
           </div>
+        </li>
+        <li>
+          Customise all the content and styles for this panel until your heart's
+          content!
         </li>
       </ol>
     </div>

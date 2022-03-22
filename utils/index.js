@@ -1,4 +1,4 @@
-import initialValues from "../content/pages/exercise-4.json";
+import defaultContent from "../content/pages/exercise-4.json";
 
 export const buildFormOptions = (label, initialValues) => {
   return {
@@ -16,7 +16,7 @@ export const buildFormOptions = (label, initialValues) => {
   };
 };
 
-const buildBlock = (blockType, defaultHtml, defaultCss) => {
+const buildBlock = (blockType) => {
   const label = mapNamesToLabels[blockType];
   const buildBlockName = (count) => {
     if (count === 1) return label;
@@ -26,6 +26,8 @@ const buildBlock = (blockType, defaultHtml, defaultCss) => {
     if (blockType === blockId) return blockType;
     return `${blockType} ${blockId}`;
   };
+  const defaultHtml = defaultContent[blockType]?.html;
+  const defaultCss = defaultContent[blockType]?.css;
 
   // This incrementor is used in the code below when adding new blocks
   var blockIncrementor = 0;

@@ -1,19 +1,14 @@
 {
-  "blocks": [
-    {
-      "_template": "hero",
-      "name": "Example Hero Panel",
-      "html": "<div id=\"demo_panel\" class='jumbotron'>\n\t<div class='container-lg'>\n\t\t<h1 class='display-4'>Welcome to this hackable demo panel</h1>\n\t\t<p class='lead'>All the code you see here is editable directly through the HTML editors in the sidebar</p>\n\t</div>\n</div>"
-    },
-    {
-      "_template": "card",
-      "name": "Card",
-      "html": "<div class=\"container\">\n  <div class=\"card\" style=\"width: 18rem;\">\n  <img src=\"...\" class=\"card-img-top\" alt=\"...\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Card title</h5>\n    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n    <a href=\"#\" target=\"_blank\" class=\"btn btn-primary\">Go somewhere</a>\n  </div>\n</div>\n</div>"
-    },
-    {
-      "_template": "customCode",
-      "name": "Dropdown (Custom Code block)",
-      "html": "// Paste the dropdown html here"
-    }
-  ]
+  "hero": {
+    "html": "<div id=\"demo_panel\" class='jumbotron text-center'>\n\t<div class='container-lg'>\n\t\t<h1 class='display-4 headline'>This is a big hero panel!</h1>\n\t\t<p class='lead description'>All the code you see here is editable directly through the HTML editors in the sidebar</p>\n\t\t<p>\n\t\t\t<a class='btn btn-primary btn-lg'>\n\t\t\t\tVisit some page\n\t\t\t</a>\n\t\t</p>\n\t</div>\n</div>",
+    "css": "#demo_panel {\n\tbackground: #e9ecef;\n}\n#demo_panel .headline {\n\tfont-weight: bold;\n}\n#demo_panel .description {\n\tcolor: black;\n}\n#demo_panel .btn {\n\tborder: 2px black dashed;\n}"
+  },
+  "card": {
+    "html": "<div class=\"container\">\n  <div class=\"card\" style=\"width: 18rem;\">\n  <img src=\"...\" class=\"card-img-top\" alt=\"...\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Card title</h5>\n    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n    <a href=\"#\" target=\"_blank\" class=\"btn btn-primary\">Go somewhere</a>\n  </div>\n</div>\n</div>",
+    "css": ""
+  },
+  "customCode": {
+    "html": "<div class='jumbotron text-center'>\n\t<h3>\n\t\tPaste the HTML for the dropdown here\n\t</h3>\n</div>",
+    "css": ""
+  }
 }
