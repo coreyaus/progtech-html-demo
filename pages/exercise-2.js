@@ -43,11 +43,9 @@ export default function Exercise({ initialValues, currentPath }) {
               color white.
             </li>
             <li>
-              <p>
-                <strong className="font-weight-bold">
-                  Optional HTML challenges
-                </strong>
-              </p>
+              <strong className="font-weight-bold">
+                Optional HTML challenges
+              </strong>
               <ul>
                 <li>
                   Change the "src" of the &lt;img&gt; so it uses the URL of a
