@@ -42,6 +42,14 @@ export default function Exercise({ initialValues, currentPath }) {
               Change the padding Heading 1 to 10px, background color green and
               color white.
             </li>
+            <li>
+              Change the "src" of the image so it uses the URL of a different
+              image
+            </li>
+            <li>
+              <strong>Optional:</strong> change the embedded video to your
+              favourite nostalgic Aussie rock song of the 1980s
+            </li>
           </ol>
         </div>
       </div>
