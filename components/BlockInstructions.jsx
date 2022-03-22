@@ -137,14 +137,28 @@ const CardTasks = ({ block }) => {
             </div>
           </div>
         </li>
-        <li className="pb-2">
+        <li>
           <p>
             Change the text of the card to describe the image you have added
           </p>
         </li>
         <li>
-          Change the <strong>href attribute</strong> in the "&lt;a&gt;" tag to a
-          url of your choosing (then click the button to see it work!)
+          <p>
+            Change the <strong>href attribute</strong> in the "&lt;a&gt;" tag to
+            a url of your choosing (then click the button to see it work!)
+          </p>
+        </li>
+        <li>
+          <p>
+            Try adding a second card to the panel by copy/pasting the code from
+            the first one
+          </p>
+        </li>
+        <li>
+          <p>
+            Update the content and styles of these cards to promote a couple of
+            your organisation's main campaigns
+          </p>
         </li>
       </ol>
     </div>

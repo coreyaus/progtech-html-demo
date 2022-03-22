@@ -85,7 +85,8 @@ const singleHtmlField = [
 export const mapNamesToLabels = {
   card: "Card",
   hero: "Hero Panel",
-  customCode: "Custom Code Block",
+  // customCode: "Custom Code Block",
+  customCode: "Dropdown button (hardest)",
 };
 
 // Use block fields with different templates and helper text,
