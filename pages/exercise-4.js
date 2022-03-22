@@ -11,7 +11,7 @@ export default function Exercise({ initialValues, currentPath }) {
 
   return (
     <Layout currentPath={currentPath}>
-      <PrimaryInstructions blocks={data.blocks} />
+      {!data.hideInstructions && <PrimaryInstructions blocks={data.blocks} />}
 
       {data?.blocks?.map((block, index) => {
         // Example for getting the HTML code with nice indenting
@@ -20,7 +20,9 @@ export default function Exercise({ initialValues, currentPath }) {
         const blockId = block.name.replaceAll(/[^A-Z0-9]/gi, "-").toLowerCase();
         return (
           <div key={index}>
-            <BlockInstructions block={block} blockId={blockId} />
+            {!data.hideInstructions && (
+              <BlockInstructions block={block} blockId={blockId} />
+            )}
             <div
               id={blockId}
               dangerouslySetInnerHTML={{ __html: block.html }}

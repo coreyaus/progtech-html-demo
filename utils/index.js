@@ -91,6 +91,11 @@ export const mapNamesToLabels = {
 // https://tina.io/docs/reference/toolkit/fields/blocks/
 export const blockFields = [
   {
+    component: "toggle",
+    name: "hideInstructions",
+    label: "Would you like to hide all the instructions from this page?",
+  },
+  {
     component: "blocks",
     name: "blocks",
     label: "HTML blocks",
