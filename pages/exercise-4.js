@@ -3,7 +3,6 @@ import { PrimaryInstructions } from "../components/PrimaryInstructions";
 import { BlockInstructions } from "../components/BlockInstructions";
 import { useForm, usePlugin } from "tinacms";
 import { buildFormOptions } from "../utils";
-import initialValues from "../content/pages/playground.json";
 
 export default function Exercise({ initialValues, currentPath }) {
   const formOptions = buildFormOptions("Exercise 4", initialValues);
@@ -43,7 +42,7 @@ export default function Exercise({ initialValues, currentPath }) {
 export const getStaticProps = async () => {
   return {
     props: {
-      initialValues,
+      initialValues: { blocks: null },
       currentPath: "/exercise-4",
     },
   };

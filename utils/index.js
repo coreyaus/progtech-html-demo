@@ -1,3 +1,5 @@
+import initialValues from "../content/pages/exercise-4.json";
+
 export const buildFormOptions = (label, initialValues) => {
   return {
     label,
@@ -23,7 +25,7 @@ const buildBlock = (blockType, defaultHtml, defaultCss) => {
   const blockClasses = (blockId) => {
     if (blockType === blockId) return blockType;
     return `${blockType} ${blockId}`;
-  }
+  };
 
   // This incrementor is used in the code below when adding new blocks
   var blockIncrementor = 0;
@@ -78,7 +80,7 @@ const singleHtmlField = [
   },
 ];
 
-const mapNamesToLabels = {
+export const mapNamesToLabels = {
   card: "Card",
   hero: "Hero Panel",
   customCode: "Custom Code Block",
@@ -87,7 +89,7 @@ const mapNamesToLabels = {
 // Use block fields with different templates and helper text,
 // rather than just a simple group-list field
 // https://tina.io/docs/reference/toolkit/fields/blocks/
-const blockFields = [
+export const blockFields = [
   {
     component: "blocks",
     name: "blocks",

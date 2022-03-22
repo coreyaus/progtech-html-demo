@@ -28,7 +28,8 @@ export const BlockInstructions = ({ block, blockId }) => {
               aria-expanded="false"
               aria-controls={`collapseOne-${accordionId}`}
             >
-              {block.name} - click to see the task instructions
+              {block.name} - click to show the suggested challenges for this
+              block
             </button>
           </h4>
         </div>
