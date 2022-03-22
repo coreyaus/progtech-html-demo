@@ -3,6 +3,11 @@ import { Controlled as CodeMirror } from "react-codemirror2";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 
+import "codemirror/mode/htmlmixed/htmlmixed";
+import "codemirror/keymap/sublime.js";
+import "codemirror/addon/edit/matchbrackets.js";
+import "codemirror/addon/edit/closebrackets.js";
+
 const CodeEditor = (props) => {
   return (
     <div className="relative mb-5">
