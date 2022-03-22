@@ -1,6 +1,5 @@
 // The incrementor is used in the code below when adding new blocks
 var incrementor = 0;
-
 const blockFields = [
   {
     component: "group-list",
@@ -26,8 +25,7 @@ const blockFields = [
         component: "text",
         name: "name",
         label: "Block name",
-        description:
-          "This is just for helping to organise your blocks in the sidebar - it's not visible on the page",
+        description: "Only visible in the sidebar to help organise your panels",
       },
       {
         component: "code-editor",
@@ -76,6 +74,49 @@ export const buildFormOptions = (label, initialValues) => {
   };
 };
 
+const nameAndNumber = (name, count) => {
+  return `${name} ${count > 1 ? `#${count}` : ""}`;
+};
+
+const buildCodeBlock = (label, defaultHtml, defaultCss) => {
+  var blockIncrementor = 0;
+  return {
+    label: label,
+    fields: [
+      {
+        component: null, // This essentially makes it a hidden field
+        name: "name",
+        label: "Block name",
+      },
+      {
+        component: "code-editor",
+        name: "html",
+        label: "Your HTML",
+      },
+      {
+        component: "code-editor",
+        name: "css",
+        label: "Your CSS",
+        // initialValue: "body { background: blue; }",
+      },
+    ],
+    defaultItem: () => {
+      blockIncrementor++;
+      return {
+        name: nameAndNumber(label, blockIncrementor),
+        html: defaultHtml ?? "<div class='jumbotron border rounded-0'></div>",
+        css: defaultCss ?? "",
+      };
+    },
+    itemProps: (item) => {
+      return {
+        key: item.id,
+        label: item.name,
+      };
+    },
+  };
+};
+
 export const buildFormOptionswithBlocks = (label, initialValues) => {
   return {
     label,
@@ -89,6 +130,17 @@ export const buildFormOptionswithBlocks = (label, initialValues) => {
     // Use block fields with different templates and helper text,
     // rather than just a simple group-list field
     // https://tina.io/docs/reference/toolkit/fields/blocks/
-    fields: {},
+    fields: [
+      {
+        component: "blocks",
+        name: "blocks",
+        label: "HTML blocks",
+        templates: {
+          card: buildCodeBlock("Card"),
+          hero: buildCodeBlock("Hero Panel"),
+          customCodeBlock: buildCodeBlock("Custom Code Block"),
+        },
+      },
+    ],
   };
 };
