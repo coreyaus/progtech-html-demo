@@ -43,12 +43,21 @@ export default function Exercise({ initialValues, currentPath }) {
               color white.
             </li>
             <li>
-              Change the "src" of the image so it uses the URL of a different
-              image
-            </li>
-            <li>
-              <strong>Optional:</strong> change the embedded video to your
-              favourite nostalgic Aussie rock song of the 1980s
+              <p>
+                <strong className="font-weight-bold">
+                  Optional HTML challenges
+                </strong>
+              </p>
+              <ul>
+                <li>
+                  Change the "src" of the &lt;img&gt; so it uses the URL of a
+                  different image
+                </li>
+                <li>
+                  Change the embedded video to your favourite nostalgic Aussie
+                  rock song of the 1980s
+                </li>
+              </ul>
             </li>
           </ol>
         </div>
