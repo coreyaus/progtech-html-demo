@@ -138,7 +138,7 @@ export const buildFormOptionswithBlocks = (label, initialValues) => {
         templates: {
           card: buildCodeBlock("Card"),
           hero: buildCodeBlock("Hero Panel"),
-          customCodeBlock: buildCodeBlock("Custom Code Block"),
+          customCode: buildCodeBlock("Custom Code Block"),
         },
       },
     ],

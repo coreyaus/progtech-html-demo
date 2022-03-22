@@ -2,7 +2,7 @@
   "blocks": [
     {
       "_template": "hero",
-      "name": "Hackable demo panel",
+      "name": "Example Hero Panel",
       "html": "<div id=\"demo_panel\" class='jumbotron'>\n\t<div class='container-lg'>\n\t\t<h1 class='display-4'>Welcome to this hackable demo panel</h1>\n\t\t<p class='lead'>All the code you see here is editable directly through the HTML editors in the sidebar</p>\n\t</div>\n</div>"
     },
     {
@@ -11,8 +11,8 @@
       "html": "<div class=\"container\">\n  <div class=\"card\" style=\"width: 18rem;\">\n  <img src=\"...\" class=\"card-img-top\" alt=\"...\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Card title</h5>\n    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n    <a href=\"#\" target=\"_blank\" class=\"btn btn-primary\">Go somewhere</a>\n  </div>\n</div>\n</div>"
     },
     {
-      "_template": "customCodeBlock",
-      "name": "Dropdown",
+      "_template": "customCode",
+      "name": "Dropdown (Custom Code block)",
       "html": "// Paste the dropdown html here"
     }
   ]
