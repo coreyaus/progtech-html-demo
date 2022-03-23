@@ -33,7 +33,7 @@ export default function Exercise({ initialValues, currentPath }) {
             </li>
           </ul>
           <h4 className="font-weight-bold">Tasks</h4>
-          <ol className="lead">
+          <ol>
             <li>
               Changes to the Heading 1 element at the top of the page
               <ul>
