@@ -34,13 +34,53 @@ export default function Exercise({ initialValues, currentPath }) {
           </ul>
           <h4 className="font-weight-bold">Tasks</h4>
           <ol className="lead">
-            <li>Change the width of the iframe to 600px and height to 400px</li>
-            <li>Change the color Heading 3 to red</li>
-            <li>Change the width of the image to 60%</li>
-            <li>Change strong text to blue</li>
             <li>
-              Change the padding Heading 1 to 10px, background color green and
-              color white.
+              Changes to the Heading 1 element at the top of the page
+              <ul>
+                <li>Change the padding to 10px</li>
+                <li>Change the background color to green</li>
+                <li>Change the text color to white</li>
+              </ul>
+            </li>
+            <li>
+              Changes in the first paragraph
+              <ul>
+                <li>
+                  Change the &lt;strong&gt; text to blue (that's the bold text)
+                </li>
+                <li>
+                  Change the italic text to blue. You'll need to add a "style"
+                  attribute to the &lt;em&gt; tag to do that!
+                </li>
+              </ul>
+            </li>
+            <li>
+              Changes to the image
+              <ul>
+                <li>Change the width of the image to 100%</li>
+                <li>
+                  Add a <code>border-radius</code> of <code>50%</code> to see
+                  what that style does
+                </li>
+              </ul>
+            </li>
+            <li>
+              Changes to the subheadline and link
+              <ul>
+                <li>Change the color Heading 3 to red</li>
+                <li>Change the color of the link to green</li>
+                <li>
+                  Add a <code>text-decoration: underline;</code> style to the
+                  link
+                </li>
+              </ul>
+            </li>
+            <li>
+              Changes to the video
+              <ul>
+                <li>Set the width of the &lt;iframe&gt; to 600px</li>
+                <li>Set the height of the &lt;iframe&gt; to 400px</li>
+              </ul>
             </li>
             <li>
               <strong className="font-weight-bold">
