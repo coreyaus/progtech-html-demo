@@ -31,6 +31,8 @@ const CodeEditor = (props) => {
           theme: "material",
           mode,
           lineNumbers: true,
+          // indentWithTabs: false,
+          // indentUnit: 2,
           keyMap: "sublime",
           lineWrapping: true,
           styleActiveLine: true,
