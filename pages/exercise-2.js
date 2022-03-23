@@ -59,8 +59,8 @@ export default function Exercise({ initialValues, currentPath }) {
               <ul>
                 <li>Change the width of the image to 100%</li>
                 <li>
-                  Add a <code>border-radius</code> of <code>50%</code> to see
-                  what that style does
+                  Add <code>border-radius: 50%</code> to see what that style
+                  does
                 </li>
               </ul>
             </li>
