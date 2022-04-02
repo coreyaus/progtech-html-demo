@@ -23,8 +23,8 @@ export default function Exercise({ initialValues, currentPath }) {
           </p>
           <ul className="lead">
             <li>
-              Use the sidebar to edit the code for the content visible in the
-              box on the left hand side of the page
+              Use the sidebar to edit the code for the content visible on the
+              left hand side of the page
             </li>
             <li>
               The right hand side shows the goal for what you're hoping to
