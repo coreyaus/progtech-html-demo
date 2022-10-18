@@ -14,38 +14,43 @@ const outFunc = () => {
 };
 
 export const BlockInstructions = ({ block, blockId }) => {
-  const accordionId = `${blockId}-accordion`;
-  return (
-    <div className="accordion" id={accordionId}>
-      <div className="card text-white bg-info rounded-0">
-        <div className="card-header" id={`headingOne-${accordionId}`}>
-          <h4 className="mb-0">
-            <button
-              className="btn btn-link text-light text-left collapsed"
-              type="button"
-              data-toggle="collapse"
-              data-target={`#collapseOne-${accordionId}`}
-              aria-expanded="false"
-              aria-controls={`collapseOne-${accordionId}`}
-            >
-              {block.name} - click to show the tasks and suggestions for this
-              block
-            </button>
-          </h4>
-        </div>
-        <div
-          id={`collapseOne-${accordionId}`}
-          className="bg-white text-dark collapse"
-          aria-labelledby={`headingOne-${accordionId}`}
-          data-parent={`#${accordionId}`}
-        >
-          <div className="card-body">
-            <BlockTasks block={block} />
+  if (block.name.includes("Hero") || block.name.includes("Card") || block.name.includes("Custom Block")) {
+    const accordionId = `${blockId}-accordion`;
+    
+    return (
+      <div className="accordion" id={accordionId}>
+        <div className="card text-white bg-info rounded-0">
+          <div className="card-header" id={`headingOne-${accordionId}`}>
+            <h4 className="mb-0">
+              <button
+                className="btn btn-link text-light text-left collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target={`#collapseOne-${accordionId}`}
+                aria-expanded="false"
+                aria-controls={`collapseOne-${accordionId}`}
+              >
+                {block.name} - click to show the tasks and suggestions for this
+                block
+              </button>
+            </h4>
+          </div>
+          <div
+            id={`collapseOne-${accordionId}`}
+            className="bg-white text-dark collapse"
+            aria-labelledby={`headingOne-${accordionId}`}
+            data-parent={`#${accordionId}`}
+          >
+            <div className="card-body">
+              <BlockTasks block={block} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <></>
+  }
 };
 
 const BlockTasks = ({ block }) => {
