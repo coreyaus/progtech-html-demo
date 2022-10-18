@@ -25,8 +25,7 @@ export const PrimaryInstructions = ({ blocks }) => {
           <strong>Exercise 4</strong>
         </h1>
         <p className="lead">
-          Use the sidebar to add new HTML blocks and complete some of the tasks
-          and suggestions for each new block.
+          Use the sidebar to add new HTML blocks and edit them to your liking!
         </p>
         {allTemplatesInUse ? (
           <p className="lead">
@@ -56,7 +55,7 @@ export const PrimaryInstructions = ({ blocks }) => {
         )}
         <ul className="lead">
           <li>
-            A blue collapsible panel appears above each block with some tasks
+            A blue collapsible panel appears above blocks marked with "*" with some tasks
             and suggestions about changes you could make
           </li>
           <li>

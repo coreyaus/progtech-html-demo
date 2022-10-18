@@ -53,7 +53,7 @@ const BlockTasks = ({ block }) => {
     return <HeroPanelTasks block={block} />;
   } else if (block.name.includes("Card")) {
     return <CardTasks block={block} />;
-  } else if (block.name.includes("Dropdown")) {
+  } else if (block.name.includes("Custom Block")) {
     return <DropdownTasks block={block} />;
   } else {
     return null;
@@ -173,32 +173,17 @@ const DropdownTasks = ({ block }) => {
           Go to the{" "}
           <a
             target="_blank"
-            href="https://getbootstrap.com/docs/4.6/components/dropdowns/"
+            href="https://getbootstrap.com/docs/4.6/components"
           >
-            bootstrap dropdown component page.
+            bootstrap components page.
           </a>
         </li>
         <li>
-          Scroll down until you find the <strong>first code example</strong>.
+          Choose a component from the sidebar and find it's <strong>code example</strong>.
           Copy and paste this into your html field.
         </li>
         <li>
-          Change the <strong>background color</strong> of the button using the
-          css editor
-          <div>
-            <span id="dropdown-bg-hint">
-              (<u>hover for hint</u>)
-            </span>
-          </div>
-        </li>
-        <li>
-          Change the <strong>font size</strong> of the button using the css
-          editor
-          <div>
-            <span id="dropdown-font-hint">
-              (<u>hover for hint</u>)
-            </span>
-          </div>
+          Customise the block how you see fit!
         </li>
       </ol>
     </div>

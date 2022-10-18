@@ -83,10 +83,13 @@ const singleHtmlField = [
 ];
 
 export const mapNamesToLabels = {
-  card: "Card",
-  hero: "Hero Panel",
+  // card: "Card",
+  hero: "* Hero Panel",
   // customCode: "Custom Code Block",
-  customCode: "Dropdown button (hardest)",
+  pricingBlock: "Pricing Block",
+  cardRow: "Card Row",
+  featuredContentBlock: "Featured Content Block",
+  customCode: "* Custom Block (hardest)",
 };
 
 // Use block fields with different templates and helper text,
@@ -103,8 +106,11 @@ export const blockFields = [
     name: "blocks",
     label: "HTML blocks",
     templates: {
-      card: buildBlock("card"),
+      // card: buildBlock("card"),
       hero: buildBlock("hero"),
+      pricingBlock: buildBlock("pricingBlock"),
+      cardRow: buildBlock("cardRow"),
+      featuredContentBlock: buildBlock("featuredContentBlock"),
       customCode: buildBlock("customCode"),
     },
   },
