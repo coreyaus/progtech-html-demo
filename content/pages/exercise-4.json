@@ -20,7 +20,7 @@
     "css": ""
   },
   "featuredContentBlock": {
-    "html": "<div class=\"container py-5\"><div class=\"row featurette\">\n  <div class=\"col-md-7\">\n    <h2 class=\"featurette-heading\">Featurette heading. <span class=\"text-muted\">It'll blow your mind.</span></h2>\n    <p class=\"lead\">Some great placeholder content for the featurette here. Imagine some exciting prose here.</p>\n  </div>\n  <div class=\"col-md-5\">\n    <svg class=\"bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto\" width=\"500\" height=\"500\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Placeholder: 500x500\" preserveAspectRatio=\"xMidYMid slice\" focusable=\"false\"><title>Placeholder</title><rect width=\"100%\" height=\"100%\" fill=\"#eee\"/><text x=\"50%\" y=\"50%\" fill=\"#aaa\" dy=\".3em\">500x500</text></svg>\n\n  </div>\n</div>\n</div>",
+    "html": "<div class=\"container py-5\"><div class=\"row featurette\">\n  <div class=\"col-md-7\">\n    <h2 class=\"featurette-heading\">Featurette heading. <span class=\"text-muted\">It'll blow your mind.</span></h2>\n    <p class=\"lead\">Some great placeholder content for the featurette here. Imagine some exciting prose here.</p>\n  </div>\n  <div class=\"col-md-5 bg-primary\">\n  <img src=\"...\" class=\"card-img-top\" alt=\"...\" />  \n\n  </div>\n</div>\n</div>",
     "css": ".featurette-divider {\n  margin: 5rem 0; /* Space out the Bootstrap <hr> more */\n}\n\n/* Thin out the marketing headings */\n.featurette-heading {\n  font-weight: 300;\n  line-height: 1;\n  letter-spacing: -.05rem;\n}\n\n@media (min-width: 40em) {\n  .featurette-heading {\n    font-size: 50px;\n  }\n}\n\n@media (min-width: 62em) {\n  .featurette-heading {\n    margin-top: 7rem;\n  }\n}"
   }
 }
